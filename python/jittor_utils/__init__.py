@@ -300,7 +300,7 @@ def find_cache_path():
     # os version key
     osv = platform.platform() + platform.node()
     if len(osv)>14:
-        osv = osv[:14] + 'x'+get_str_hash(osv)[:2]
+        osv = osv[:14] + 'x'+get_str_hash(osv[:14])[:2]
     # py version
     pyv = "py"+platform.python_version()
     # cpu version
